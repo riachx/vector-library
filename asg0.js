@@ -130,12 +130,12 @@ function handleDrawOperationEvent() {
         console.log("Angle: " + angleBetween(v1,v2));
 
     } else if (selectElement.value == "area") {
-        
+        console.log("work");
         drawVector(v1, "red");
         drawVector(v2, "blue");
-
+        
         //console.log("Area of the triangle: " + areaTriangle(v1,v2));
-    }
+    } else {}
     
 }
 
