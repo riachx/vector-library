@@ -129,12 +129,12 @@ function handleDrawOperationEvent() {
         drawVector(v2, "blue");
         console.log("Angle: " + angleBetween(v1,v2));
 
-    } else if (selectElement.value == "cross") {
+    } else if (selectElement.value == "area") {
         
         drawVector(v1, "red");
         drawVector(v2, "blue");
 
-        console.log("Area of the triangle: " + areaTriangle(v1,v2));
+        //console.log("Area of the triangle: " + areaTriangle(v1,v2));
     }
     
 }
@@ -150,8 +150,7 @@ function angleBetween(v1,v2) {
 
 
 function areaTriangle(v1,v2) {
-    var a = Vector3.cross(v1,v2);
-    var v1 = new Vector3([a[0], a[1], a[2]]);
-    var b = v1.magnitude()/2;
+    let a = Vector3.cross(v1,v2);
+    let b = (a.magnitude() / 2);
    return b;
 }
